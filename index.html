@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en" xml:lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#000088">
+        <link rel="icon" type="image/png" href="favicon.png" />
+    <!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4dc26" />
+  <meta
+    name="description"
+    content="Best Pokemon encyclopedia (candidate test)"
+  />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    -->
+ <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mwa.igarrido.es/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+        <title>IGarrido page</title>
+        <style type="text/css">
+body {
+  margin: 0;
+  background-color: black;
+  background-image: radial-gradient(
+    rgba(0, 150, 0, 0.75), black 120%
+  );
+  height: 100vh;
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+}
+::selection {
+  background: #ff0;
+  color: #008;
+  text-shadow: none;
+}
+nav.menu { margin: 0; padding-left:1em; background-color: #bbb; color: black; cursor: default; }
+nav.menu ul { margin: 0; padding: 0; }
+nav.menu li { list-style-type: none; padding: 0 1em; float: left; }
+nav.menu li:first-letter { color: #770000; }
+nav.menu li:hover { background-color: #080; }
+nav.menu li .submenu { position: absolute; display: none; z-index: 1; background-color:#bbb; }
+nav.menu li:hover .submenu { position: absolute; display: block; }
+div.submenu { border: solid #bbb 0.4em; top: 1em; margin-left: -1em; }
+div.submenu div { border: solid #000 0.1em; }
+div.submenu ul  { border: solid #bbb 0.3em; }
+div.submenu li { float: none; }
+div.submenu li a { text-decoration:none; color: #000; cursor: pointer; }
+div.border1 {
+    border: solid #008 0.4em;
+position: absolute;
+top: 1em;
+bottom: 1em;
+width: 100%;
+background-color: #008;
+box-sizing: border-box;
+}
+div.border2 {
+    border: double #fff 0.3em;
+    height: 100%;
+    box-sizing: border-box;
+}
+div.border3 {
+    border: solid #008 0.5em;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+    scrollbar-color: #bbb transparent;
+    background-image: radial-gradient( rgba(150, 150, 250, 0.5), transparent 110% )
+}
+header {
+    position: absolute;
+top: -0.3em;
+background: #008;
+padding: 0 1em;
+left: 50%;
+transform: translateX(-50%);
+overflow: hidden;
+}
+section.position { display: flex; flex-wrap:nowrap; margin: 0 3em; }
+section.position div { flex-grow: 1; }
+section.editor { color: #ff0; }
+section.editor h2 { font-size: 100%; margin-top: 2em; color: #fff;  }
+section.editor a { color: white; }
+footer { position: absolute; bottom: 0; height: 1em; width: 100%; overflow: hidden; background-color: #aaa; }
+footer ul { margin: 0; padding: 0; color: #000; }
+footer li { list-style-type: none; padding: 0 1em; float: left; }
+footer li mark { background-color: #aaa; color: #770000; }
+footer span { background-color: #008; clear:left; margin-left: 1em; padding: 0 1em; }
+
+        </style>
+        <script type="text/javascript">
+const chooseLanguage = () => {
+    const lang = navigator.language.substr(0,2);
+    const currentLang = document.querySelector('html').lang.substr(0,2);
+
+    if( lang != currentLang ) {
+        document.body.querySelectorAll(`[lang=${currentLang}]`).forEach( (el) => { el.style.display = 'none'; } );
+        document.body.querySelectorAll(`[lang=${lang}]`).forEach( (el) => { el.style.display = 'block'; } );
+    }
+}
+window.addEventListener( 'load', chooseLanguage );
+        </script>
+    </head>
+    <body>
+        <nav class="menu" lang="en">
+            <ul>
+                <li>File
+                    <div class="submenu"><div><ul><li><a href="https://fullstack.igarrido.es/en/blog">Blog</a></li><li>RSS</li></ul></div></div>
+                </li>
+                <li>Programmer
+                    <div class="submenu"><div><ul>
+                        <li>Career</li>
+                        <li><a href="en/side-projects.html">Side projects</a></li>
+                        <li>Skills</li>
+                    </ul></div></div>
+                </li>
+                <li>Professor
+                    <div class="submenu"><div><ul>
+                        <li>Classes</li>
+                        <li><a href="en/programming.html">Knowledge</a></li>
+                    </ul></div></div>
+                </li>
+                <li>Contact
+                    <div class="submenu"><div><ul>
+                        <li>Social networks</li>
+                        <li><a href="en/contact.html">Form</a></li>
+                    </ul></div></div>
+                </li>
+            </ul>
+            <div style="clear:both;"></div>
+        </nav>
+        <nav class="menu" lang="es" style="display:none;">
+            <ul>
+                <li>Fichero
+                    <div class="submenu"><div><ul>
+                        <li><a href="https://fullstack.igarrido.es/blog">Blog</a></li>
+                        <li>RSS</li>
+                    </ul></div></div>
+                </li>
+                <li>Programador
+                    <div class="submenu"><div><ul>
+                        <li><a href="es/curriculum.html">Trayectoria</a></li>
+                        <li><a href="es/proyectos-personales.html">Side projects</a></li>
+                        <li><a href="es/tecnologias.html">Tecnologías</a></li>
+                    </ul></div></div>
+                </li>
+                <li>Profesor
+                    <div class="submenu"><div><ul>
+                        <li><a href="es/clases.html">Clases</a></li>
+                        <li><a href="es/base-conocimiento.html">Conocimientos</a></li>
+                    </ul></div></div>
+                </li>
+                <li>Contacto
+                    <div class="submenu"><div><ul>
+                        <li><a href="es/redes-sociales.html"></a></li>
+                        <li><a href="es/contacto.html">Formulario</a></li>
+                    </ul></div></div>
+                </li>
+            </ul>
+            <div style="clear:both;"></div>
+        </nav>
+        <div class="border1">
+            <div class="border2">
+                <div class="border3">
+                    <header lang="en">Iván Garrido page</header>
+                    <header lang="es" style="display:none;">Página de Iván Garrido</header>
+                    <section class="position">
+                        <div>Line 1</div><div>Col 1</div>
+                        <div>Insert Indent</div>
+                        <div>Unindent</div>
+                        <div style="text-align:right;">C:IVAN.PAS</div>
+                    </section>
+                    <section class="editor" lang="en">
+                        <article>
+                            <h2>{-} Welcome</h2>
+                            Welcome to my personal page. I've make a little tribute to Turbo Pascal 5.5. If you don't like it, you can access to my traditional page <a href="en/index.html">here</a>.
+                            <h2>Who am I?</h2>
+                            I'm a Full-Stack engineer. I also have experience as software architect and I really love teaching my CS knowledge to others.
+                        </article>
+                    </section>
+                    <section class="editor" lang="es" style="display:none;">
+                        <article>
+                            <h2>{-} Bienvenida</h2>
+                            Bienvenido/a a mi página web personal. He hecho un tributo a Turbo Pascal 5.5. Si no te gusta, puedes acceder a una página tradicional <a href="es/index.html">aquí</a>.
+                            <h2>¿Quién soy?</h2>
+                            Soy un programador Full-Stack, con experiencia como arquitecto software y apasionado de enseñar mis conocimientos a los demás.
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul lang="en">
+                <li>Other links:</li>
+                <li><a href="https://twitter.com/igarridoatwork"    target="_blank"><mark>F7</mark>-Twitter</a></li>
+                <li><a href="https://github.com/igarridomorillas"   target="_blank"><mark>F8</mark>-GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/igarrido/" target="_blank"><mark>F10</mark>-Linkedin</a></li>
+            </ul>
+            <ul lang="es" style="display:none;">
+                <li>Otras páginas:</li>
+                <li><a href="https://twitter.com/igarridoatwork"    target="_blank"><mark>F7</mark>-Twitter</a></li>
+                <li><a href="https://github.com/igarridomorillas"   target="_blank"><mark>F8</mark>-GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/igarrido/" target="_blank"><mark>F10</mark>-Linkedin</a></li>
+            </ul>
+            <span>NUM</span>
+        </footer>
+    </body>
+</html>
