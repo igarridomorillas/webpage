@@ -1,0 +1,66 @@
+:root {
+    --nc-bg-4: #214c62;
+    --nc-lk-1: #214c62;
+    --nc-tx-1: #214c62;
+  }
+
+header       { background: var(--nc-bg-4); }
+header h1    { color: #fff; }
+
+nav          { position: relative; }
+nav li       { list-style: none; }
+nav li span  { display:inline-block; width: 7rem; }
+nav .submenu              { display: inline-block; }
+nav .submenu ul           { display: flex; }
+nav .submenu ul li        { padding: 0 5px 0 0; }
+nav .submenu ul li::after { content: ' |'; }
+nav .submenu ul li:last-of-type::after { content: ''; }
+
+form#contact dl { padding: 1rem 2rem; }
+form#contact label { display: inline-block; width: 10rem; }
+form#contact label[for="subject"] { width: auto; }
+form#contact input { width: calc( 100% - 12.4rem ); }
+form#contact textarea { margin: 0.5rem 0; width: 100%; }
+form#contact button { float: right; }
+
+.schema {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.schema .title {
+  min-width: 10rem;
+  max-width: 25%;
+}
+
+.schema .content {
+  box-sizing: border-box;
+  max-width: 36rem;
+  padding: 0.5rem 0 1rem 1rem
+  }
+
+.schema .content h3 {
+  font-size: 1.25rem;
+}
+
+.schema .content ul.wide-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.schema .content ul.wide-list li {
+  box-sizing: border-box;
+  width: 33%;
+}
+
+footer       { border-top: #000 dashed 1px; margin: 5rem -2rem 1rem -2rem; padding: 1rem 2rem 0rem 2rem; }
+footer ul    { display: flex; }
+footer ul li { flex-grow: 1; list-style: none; }
+
+@media only screen and (max-width: 600px) {
+  h1           { font-size: 1.3rem; }
+  h2,h3        { font-size: 1.2rem; }
+  nav>ul       { padding-left: 0; }
+  nav .submenu { display: block; } 
+}
