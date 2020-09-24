@@ -7,3 +7,7 @@
 ## 2020.09.22
 
 - Creating simpler page.
+
+## 2020.09.24
+
+- Creating English version.
