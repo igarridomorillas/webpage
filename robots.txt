@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /es/curriculum.html
+Disallow: /awesome/pinta.html
+Disallow: /awesome/xonix.html
+Disallow: /awesome/turbopascal55.html
+Disallow: /awesome/terminal-green.html
+Disallow: /handle-contact-form.php
+Sitemap: https://igarrido.es/sitemap.xml
