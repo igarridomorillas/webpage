@@ -11,3 +11,7 @@
 ## 2020.09.24
 
 - Creating English version.
+
+## 2020.10.02
+
+- Creating an sript which sends to me emails from contact page.
