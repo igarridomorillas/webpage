@@ -1,0 +1,134 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+    <!--
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4dc26" />
+  <meta
+    name="description"
+    content="Best Pokemon encyclopedia (candidate test)"
+  />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    -->
+        <title>IGarrido page</title>
+        <style type="text/css">
+body {
+  margin: 0;
+  background-color: black;
+  background-image: radial-gradient(
+    rgba(0, 150, 0, 0.75), black 120%
+  );
+  height: 100vh;
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+}
+::selection {
+  background: #ff0;
+  color: #008;
+  text-shadow: none;
+}
+nav.menu { margin: 0; padding-left:1em; background-color: #bbb; color: black; cursor: default; }
+nav.menu ul { margin: 0; padding: 0; }
+nav.menu li { list-style-type: none; padding: 0 1em; float: left; }
+nav.menu li:first-letter { color: #770000; }
+nav.menu li:hover { background-color: #080; }
+nav.menu li .submenu { position: absolute; display: none; z-index: 1; background-color:#bbb; }
+nav.menu li:hover .submenu { position: absolute; display: block; }
+div.submenu { border: solid #bbb 0.4em; top: 1em; margin-left: -1em; }
+div.submenu div { border: solid #000 0.1em; }
+div.submenu ul  { border: solid #bbb 0.3em; }
+div.submenu li { float: none; cursor: pointer; }
+div.border1 {
+    border: solid #008 0.4em;
+position: absolute;
+top: 1em;
+bottom: 1em;
+width: 100%;
+background-color: #008;
+box-sizing: border-box;
+}
+div.border2 {
+    border: double #fff 0.3em;
+    height: 100%;
+    box-sizing: border-box;
+}
+div.border3 {
+    border: solid #008 0.5em;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+    scrollbar-color: #bbb transparent;
+    background-image: radial-gradient( rgba(150, 150, 250, 0.55), transparent 110% )
+}
+header {
+    position: absolute;
+top: -0.3em;
+background: #008;
+padding: 0 1em;
+left: 50%;
+transform: translateX(-50%);
+overflow: hidden;
+}
+section.position { display: flex; flex-wrap:nowrap; margin: 0 3em; }
+section.position div { flex-grow: 1; }
+section.editor { color: #ff0; }
+footer { position: absolute; bottom: 0; height: 1em; width: 100%; overflow: hidden; background-color: #aaa; }
+footer ul { margin: 0; padding: 0; color: #000; }
+footer li { list-style-type: none; padding: 0 1em; float: left; }
+footer li mark { background-color: #aaa; color: #770000; }
+footer span { background-color: #008; clear:left; margin-left: 1em; padding: 0 1em; }
+        </style>
+    </head>
+    <body>
+        <nav class="menu">
+            <ul>
+                <li>File
+                    <div class="submenu"><div><ul><li>Open</li><li>Save</li></ul></div></div>
+                </li>
+                <li>Edit
+                    <div class="submenu"><div><ul><li>Copy</li><li>Paste</li></ul></div></div>
+                </li>
+                <li>Search</li>
+                <li>Run</li>
+            </ul>
+            <div style="clear:both;"></div>
+        </nav>
+        <div class="border1">
+            <div class="border2">
+                <div class="border3">
+                    <header>Página de Iván Garrido</header>
+                    <section class="position">
+                        <div>Line 1</div><div>Col 1</div>
+                        <div>Insert Indent</div>
+                        <div>Unindent</div>
+                        <div style="text-align:right;">C:IVAN.PAS</div>
+                    </section>
+                    <section class="editor">
+                        
+                        <article>
+                            PROGRAM Ivan;<br/>
+                            <br/>
+                            BEGIN<br/>
+                              WriteLn('Hola mundo!');<br/>
+                            END.<br/>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <li><mark>F1</mark>-Help</li>
+                <li><mark>F6</mark>-Switch</li>
+                <li><mark>F7</mark>-Trace</li>
+                <li><mark>F8</mark>-Step</li>
+                <li><mark>F9</mark>-Make</li>
+                <li><mark>F10</mark>-Menu</li>
+            </ul>
+            <span>NUM</span>
+        </footer>
+    </body>
+</html>

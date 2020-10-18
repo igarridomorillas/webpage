@@ -15,3 +15,7 @@
 ## 2020.10.02
 
 - Creating an sript which sends to me emails from contact page.
+
+## 2020.10.18
+
+- Add some side not-finished-but-working projects (Xonix, green terminal).
