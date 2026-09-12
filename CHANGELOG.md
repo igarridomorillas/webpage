@@ -24,3 +24,4 @@
 
 - Move former webpage to v2 path.
 - Install Astro.
+- Create a provisional landing page.
