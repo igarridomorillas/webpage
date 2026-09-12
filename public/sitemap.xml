@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
+  <url>
+    <loc>https://igarrido.es/</loc>
+    <lastmod>2020-08-11</lastmod>
+  </url>
+  <!-- English -->
+  <url>
+    <loc>https://igarrido.es/v2/en/</loc>
+    <lastmod>2020-08-12</lastmod>
+    <xhtml:link 
+               rel="alternate"
+               hreflang="en"
+               href="https://igarrido.es/v2/en/"/>
+    <xhtml:link 
+               rel="alternate"
+               hreflang="es"
+               href="https://igarrido.es/v2/es/"/>
+    <xhtml:link 
+               rel="alternate"
+               hreflang="x-default"
+               href="https://igarrido.es/v2/en/"/>
+  </url>
+  <!-- Español -->
+  <url>
+    <loc>https://igarrido.es/v2/es/</loc>
+    <lastmod>2020-08-12</lastmod>
+    <xhtml:link 
+               rel="alternate"
+               hreflang="es"
+               href="https://igarrido.es/v2/es/"/>
+    <xhtml:link 
+               rel="alternate"
+               hreflang="en"
+               href="https://igarrido.es/v2/en/"/>
+    <xhtml:link 
+               rel="alternate"
+               hreflang="x-default"
+               href="https://igarrido.es/v2/en/"/>
+  </url>
+</urlset>
