@@ -23,3 +23,4 @@
 ## 2026.09.12
 
 - Move former webpage to v2 path.
+- Install Astro.
