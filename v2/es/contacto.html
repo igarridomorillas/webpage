@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css" />
-  <link rel="stylesheet" href="/css/pages.css" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/v2/css/pages.css" />
+  <link rel="icon" href="/v2/favicon.ico" />
   <!--
     <meta name="theme-color" content="#f4dc26" />
     <meta
@@ -35,38 +35,26 @@
 
 <body>
   <header>
-    <h1>Iván Garrido - Clases de programación</h1>
+    <h1>Iván Garrido - Contacto</h1>
   </header>
-  <main>
+  <section>
     <article>
-      <h2>Clases a universitarios</h2>
-      <p>
-        Doy clases particulares de programación a nivel universitario de grados de ingeniería (informática,
-        industriales, ...) y grados de dirección de empresas.
-      </p>
-      <p>
-        Puedo ayudarte con los lenguajes Python, JAVA, R, C, C++ o C#. También con HTML5+CSS3+Javascript. O con tus
-        clases de estructura de datos, algorítmica, bases de datos o arquitectura de computadores.
-      </p>
-      <p>
-        Tengo un guión propio pero me adapto al temario del estudiante.
-      </p>
+      <h2>Nos ponemos en contacto</h2>
+      <p>Rellena el formulario de debajo y me pondré en contacto contigo lo antes posible.</p>
+      <p>(Puedes rellenar bien el e-mail o bien el teléfono)</p>
     </article>
-    <article>
-      <h2>Clases de programación a profesionales</h2>
-      <p>
-        Doy clases particulares para re-orientar a profesionales que no sepan programación o que necesiten actualizarse
-        con un nuevo lenguaje de programación.
-      </p>
-    </article>
-    <p>
-      <a href="/es/contacto.html" onclick="return false;" style="text-decoration-line: line-through;">Contacta
-        conmigo!</a>
-    </p>
-    <p style="color: #733">
-      Lo siento, actualmente no puedo planificar clases particulares.
-    </p>
-  </main>
+    <form id="contact" method="POST" action=".">
+      <dl>
+        <dt><label for="name">Nombre:</label><input type="text" name="name" placeholder="Tu nombre" /></dd>
+        <dt><label for="email">e-Mail:</label><input type="email" name="email" placeholder="Tu email" /></dt>
+        <dt><label for="phone">Teléfono:</label><input type="tel" name="phone" placeholder="Tu número de teléfono" />
+        </dt>
+        <dt><label for="subject">Motivo de contacto:</label><br /><textarea name="subject"
+            placeholder="El motivo de ponerte en contacto conmigo, escribe lo que quieras"></textarea></dt>
+        <dt><button id="send" type="submit">Enviar</button></dt>
+      </dl>
+    </form>
+  </section>
   <!--
     <nav class="menu">
       <ul>
@@ -100,6 +88,19 @@
       <li><a href="https://www.linkedin.com/in/igarrido/" target="_blank">Linkedin</a></li>
     </ul>
   </footer>
+  <script type="text/javascript">
+    window.addEventListener('load', () => {
+      const f = document.getElementById('contact');
+      f.addEventListener('submit', () => {
+        f.action = atob('aHR0cHM6Ly9pZ2Fycmlkby5lcy9oYW5kbGUtY29udGFjdC1mb3JtLnBocA');
+        const h = document.createElement('input');
+        h.type = "hidden";
+        h.name = "ua";
+        h.value = navigator.userAgent;
+        f.appendChild(h);
+      })
+    });
+  </script>
 </body>
 
 </html>

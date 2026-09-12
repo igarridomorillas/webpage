@@ -19,3 +19,7 @@
 ## 2020.10.18
 
 - Add some side not-finished-but-working projects (Xonix, green terminal).
+
+## 2026.09.12
+
+- Move former webpage to v2 path.

@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html lang="es" xml:lang="es">
+<html lang="en" xml:lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css" />
-  <link rel="stylesheet" href="/css/pages.css" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/v2/css/pages.css" />
+  <link rel="icon" href="/v2/favicon.ico" />
   <!--
     <meta name="theme-color" content="#f4dc26" />
     <meta
@@ -35,60 +35,24 @@
 
 <body>
   <header>
-    <h1>Iván Garrido - Tecnologías que conozco</h1>
+    <h1>Iván Garrido - Contact</h1>
   </header>
-  <main>
-    <article class="schema">
-      <div class="title">
-        <h2>Front-End</h2>
-      </div>
-      <div class="content">
-        <h3>Javascript</h3>
-        <p>Profesor de Front-End en <a href="https://adalab.es">Adalab</a>.</p>
-        <ul>
-          <li>HTML5 + CSS3</li>
-        </ul>
-        <h3>React</h3>
-        <p>Profesor de Front-End en <a href="https://adalab.es">Adalab</a>.</p>
-        <h3>Angular</h3>
-        <h3>Vue</h3>
-      </div>
+  <section>
+    <article>
+      <h2>Contact me!</h2>
+      <p>Fill the form below and I will email you back as soon as possible.</p>
     </article>
-    <article class="schema">
-      <div class="title">
-        <h2>Backend</h2>
-      </div>
-      <div class="content">
-        <h3>PostgreSQL</h3>
-        <p></p>
-        <h3>Docker</h3>
-
-        <h3>Lenguajes</h3>
-        <ul class="wide-list">
-          <li>Python</li>
-          <li>JAVA</li>
-          <li>Typescript</li>
-          <li>Scala</li>
-        </ul>
-      </div>
-    </article>
-    <article class="schema">
-      <div class="title">
-        <h2>Opensource</h2>
-      </div>
-      <div class="content">
-        <h3>Wordpress</h3>
-        <p></p>
-        <h3>Chamilo/Dockeos</h3>
-        <h3>Moodle</h3>
-        <h3>Typos3</h3>
-      </div>
-    </article>
-    <!-- Soft-skills -->
-    <!--
-      article.schema>(div.title>h2)+(div.content>(h3+p))
--->
-  </main>
+    <form id="contact" method="POST" action=".">
+      <dl>
+        <dt><label for="name">Name:</label><input type="text" name="name" placeholder="Your name" /></dd>
+        <dt><label for="email">e-Mail:</label><input type="email" name="email" placeholder="Your email" /></dt>
+        <dt><label for="phone">Phone number:</label><input type="tel" name="phone" placeholder="Your phone number" />
+        </dt>
+        <dt><label for="subject">Reason to contact me:</label><br /><textarea name="subject"></textarea></dt>
+        <dt><button id="send" type="submit">Contact</button></dt>
+      </dl>
+    </form>
+  </section>
   <!--
     <nav class="menu">
       <ul>
@@ -115,13 +79,26 @@
     </nav>
 -->
   <footer>
-    Redes sociales:
+    Social networks:
     <ul>
       <li><a href="https://twitter.com/igarridoatwork" target="_blank">Twitter</a></li>
       <li><a href="https://github.com/igarridomorillas" target="_blank">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/igarrido/" target="_blank">Linkedin</a></li>
     </ul>
   </footer>
+  <script type="text/javascript">
+    window.addEventListener('load', () => {
+      const f = document.getElementById('contact');
+      f.addEventListener('submit', () => {
+        f.action = atob('aHR0cHM6Ly9pZ2Fycmlkby5lcy9oYW5kbGUtY29udGFjdC1mb3JtLnBocA');
+        const h = document.createElement('input');
+        h.type = "hidden";
+        h.name = "ua";
+        h.value = navigator.userAgent;
+        f.appendChild(h);
+      })
+    });
+  </script>
 </body>
 
 </html>

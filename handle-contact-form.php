@@ -27,7 +27,7 @@
   }
 
   //$lang = substr( $_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2 );
-  $lang = substr( $_SERVER['HTTP_REFERER'], 20, 2 );
+  $lang = substr( $_SERVER['HTTP_REFERER'], 23, 2 );
 
   $body = <<<"EOD"
 <div>
